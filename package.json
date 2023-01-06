@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express-generator": "^4.16.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.5.2"
+  }
+}

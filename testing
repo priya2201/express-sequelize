@@ -1,0 +1,34 @@
+const User=require('./models/user');
+const Company=require('./models/company');
+const WorkingDay=require('./models/workingday');
+
+// Company.create({
+//     name:'My Dream Flies'
+// }).then((newCompany)=>{
+//     console.log(newCompany.get())
+// }).catch((err)=>{
+//     console.log('Error while Creating the company'+err)
+// })
+
+// User.bulkCreate([
+//     {email: 'john-doe@domain.com', firstName: 'John',  lastName: 'DOE', companyId: 1},
+//     {email: 'log_w@domain.com', firstName: 'Logan',  lastName: 'WOLVERINE', companyId: 1},
+//     {email: 'john-connor@domain.com', firstName: 'John',  lastName: 'CONNOR', companyId: 1}
+    
+// ]).then((newUsers) => {
+//     console.log(newUsers)
+//   })
+//   .catch((err) => {
+//     console.log("Error while users creation : ", err)
+//   })
+User.findOne({
+    where:{
+        email:'john-connor@domain.com'
+    },
+    include:'Company'
+}).then((findUser)=>{
+console.log(findUser)
+console.log(findUser.company)
+}).catch((err)=>{
+    console.log('error while find User'+err)
+})
