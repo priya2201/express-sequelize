@@ -36,6 +36,8 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('UsersWorkingDays');
+    await queryInterface.dropTable('UsersWorkingDays','workingDay');
   }
+
+  
 };
